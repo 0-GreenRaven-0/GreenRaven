@@ -32,7 +32,7 @@ const Cards = ({ onCardClick }) => {
       src: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Arsenal.png?updatedAt=1766079255463",
       // Higher quality version for inactive slides
       srcHighRes: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Arsenal.png?updatedAt=1766079255463&tr=w-800,q-90",
-      title: "The Arsenal",
+      title: "The Arsenal (Services)",
       description: "Words that convert. Pages that captivate. Systems that scale. Behold the weapons of transformation.",
       section: 'TheArsenal'
     },
@@ -40,7 +40,7 @@ const Cards = ({ onCardClick }) => {
       id: 2, 
       src: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Chronicle.png?updatedAt=1766079255750",
       srcHighRes: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Chronicle.png?updatedAt=1766079255750&tr=w-800,q-90",
-      title: "The Chronicle",
+      title: "The Chronicle (Projects)",
       description: "Tales of triumph etched in results. Witness the battles won and empires built through strategic mastery.",
       section: 'TheChronicle'
     },
@@ -48,7 +48,7 @@ const Cards = ({ onCardClick }) => {
       id: 3, 
       src: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Witnesses.png?updatedAt=1766079255225",
       srcHighRes: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Witnesses.png?updatedAt=1766079255225&tr=w-800,q-90",
-      title: "The Witnesses",
+      title: "The Witnesses (Testimonials)",
       description: "Voices from those who walked through darkness into light. Their words carry the weight of transformation.",
       section: 'TheWitnesses'
     },
@@ -56,7 +56,7 @@ const Cards = ({ onCardClick }) => {
       id: 4, 
       src: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Raven.png?updatedAt=1766079254818",
       srcHighRes: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Raven.png?updatedAt=1766079254818&tr=w-800,q-90",
-      title: "The Raven",
+      title: "The Raven (About Me)",
       description: "Born in shadow, forged in purpose. Discover the journey of the guardian who bridges worlds through words.",
       section: 'TheRaven'
     },
@@ -64,7 +64,7 @@ const Cards = ({ onCardClick }) => {
       id: 5, 
       src: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Invitation.png?updatedAt=1766079256432",
       srcHighRes: "https://ik.imagekit.io/greenraven/Green%20Raven/The%20Invitation.png?updatedAt=1766079256432&tr=w-800,q-90",
-      title: "The Invitation",
+      title: "The Invitation (Contact)",
       description: "The path is laid before you. Step forward and seal the covenant. Your transformation awaits.",
       section: 'TheInvitation'
     },

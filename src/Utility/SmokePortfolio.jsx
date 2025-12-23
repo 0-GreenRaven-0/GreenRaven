@@ -10,7 +10,7 @@ const SmokeScene = memo(() => (
     <Smoke
       color="#09fa05"
       opacity={0.5}
-      segments={10}
+      segments={20}
       position={[3, 2, 0]}
       scale={[3, 1, 1]}
       rotation={[0, 100, -0.07]}
