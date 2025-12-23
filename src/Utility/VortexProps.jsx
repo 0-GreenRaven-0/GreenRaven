@@ -2,32 +2,55 @@ import { cn } from "../lib/utils";
 import React, { useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
 import { motion } from "motion/react";
+import { useMediaQuery } from "react-responsive";
 
 export const Vortex = (props) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const animationFrameId = useRef();
-  const particleCount = props.particleCount || 700;
+  
+  // Detect mobile devices
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  
+  // Adjust settings based on device
+  const particleCount = isMobile 
+    ? (props.mobileParticleCount || 200)  // Reduced for mobile
+    : (props.particleCount || 700);       // Full for desktop
+  
   const particlePropCount = 9;
   const particlePropsLength = particleCount * particlePropCount;
+  
+  // Mobile-optimized settings
   const rangeY = props.rangeY || 100;
-  const baseTTL = 50;
-  const rangeTTL = 150;
+  const baseTTL = isMobile ? 30 : 50;
+  const rangeTTL = isMobile ? 80 : 150;
   const baseSpeed = props.baseSpeed || 0.0;
-  const rangeSpeed = props.rangeSpeed || 1.5;
-  const baseRadius = props.baseRadius || 1;
-  const rangeRadius = props.rangeRadius || 2;
+  const rangeSpeed = isMobile ? 0.8 : (props.rangeSpeed || 1.5);
+  const baseRadius = isMobile ? 0.8 : (props.baseRadius || 1);
+  const rangeRadius = isMobile ? 1 : (props.rangeRadius || 2);
   const baseHue = props.baseHue || 120;
   const rangeHue = 60;
-  const noiseSteps = 3;
-  const xOff = 0.00125;
-  const yOff = 0.00125;
-  const zOff = 0.0005;
+  
+  // Reduce noise complexity on mobile
+  const noiseSteps = isMobile ? 2 : 3;
+  const xOff = isMobile ? 0.002 : 0.00125;
+  const yOff = isMobile ? 0.002 : 0.00125;
+  const zOff = isMobile ? 0.001 : 0.0005;
+  
+  // Reduce glow/blur intensity on mobile
+  const blurAmount = isMobile ? 4 : 8;
+  const secondaryBlur = isMobile ? 2 : 4;
+  
   const backgroundColor = props.backgroundColor || "#000000";
   let tick = 0;
   const noise3D = createNoise3D();
   let particleProps = new Float32Array(particlePropsLength);
   let center = [0, 0];
+
+  // Frame rate limiting for mobile
+  const targetFPS = isMobile ? 30 : 60;
+  const frameInterval = 1000 / targetFPS;
+  let lastFrameTime = 0;
 
   const HALF_PI = 0.5 * Math.PI;
   const TAU = 2 * Math.PI;
@@ -47,6 +70,12 @@ export const Vortex = (props) => {
       const ctx = canvas.getContext("2d");
 
       if (ctx) {
+        // Optimize canvas for mobile
+        if (isMobile) {
+          canvas.style.willChange = 'transform';
+          canvas.style.imageRendering = 'optimizeSpeed';
+        }
+        
         resize(canvas, ctx);
         initParticles();
         draw(canvas, ctx);
@@ -56,7 +85,6 @@ export const Vortex = (props) => {
 
   const initParticles = () => {
     tick = 0;
-    // simplex = new SimplexNoise();
     particleProps = new Float32Array(particlePropsLength);
 
     for (let i = 0; i < particlePropsLength; i += particlePropCount) {
@@ -84,22 +112,44 @@ export const Vortex = (props) => {
   };
 
   const draw = (canvas, ctx) => {
-    tick++;
+    const now = Date.now();
+    const elapsed = now - lastFrameTime;
+    
+    // Frame rate limiting
+    if (elapsed > frameInterval) {
+      lastFrameTime = now - (elapsed % frameInterval);
+      
+      tick++;
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Use lighter clear method on mobile
+      if (isMobile) {
+        ctx.fillStyle = backgroundColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      } else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = backgroundColor;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
 
-    ctx.fillStyle = backgroundColor;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    drawParticles(ctx);
-    renderGlow(canvas, ctx);
-    renderToScreen(canvas, ctx);
+      drawParticles(ctx);
+      
+      // Reduce glow passes on mobile
+      if (isMobile) {
+        renderGlow(canvas, ctx, blurAmount);
+      } else {
+        renderGlow(canvas, ctx, blurAmount);
+        renderGlow(canvas, ctx, secondaryBlur);
+      }
+      
+      renderToScreen(canvas, ctx);
+    }
 
     animationFrameId.current = window.requestAnimationFrame(() =>
       draw(canvas, ctx));
   };
 
   const drawParticles = (ctx) => {
+    // Batch particle drawing for better performance
     for (let i = 0; i < particlePropsLength; i += particlePropCount) {
       updateParticle(i, ctx);
     }
@@ -132,7 +182,10 @@ export const Vortex = (props) => {
     radius = particleProps[i8];
     hue = particleProps[i9];
 
-    drawParticle(x, y, x2, y2, life, ttl, radius, hue, ctx);
+    // Skip drawing some particles on mobile for extra performance
+    if (!isMobile || life % 2 === 0) {
+      drawParticle(x, y, x2, y2, life, ttl, radius, hue, ctx);
+    }
 
     life++;
 
@@ -159,7 +212,9 @@ export const Vortex = (props) => {
     ctx.save();
     ctx.lineCap = "round";
     ctx.lineWidth = radius;
-    ctx.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
+    // Slightly reduced opacity on mobile
+    const opacity = isMobile ? fadeInOut(life, ttl) * 0.8 : fadeInOut(life, ttl);
+    ctx.strokeStyle = `hsla(${hue},100%,${isMobile ? '50%' : '60%'},${opacity})`;
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.lineTo(x2, y2);
@@ -178,8 +233,17 @@ export const Vortex = (props) => {
   ) => {
     const { innerWidth, innerHeight } = window;
 
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
+    // Reduce resolution on mobile for better performance
+    if (isMobile) {
+      const pixelRatio = window.devicePixelRatio || 1;
+      canvas.width = innerWidth * Math.min(pixelRatio, 1);
+      canvas.height = innerHeight * Math.min(pixelRatio, 1);
+      canvas.style.width = `${innerWidth}px`;
+      canvas.style.height = `${innerHeight}px`;
+    } else {
+      canvas.width = innerWidth;
+      canvas.height = innerHeight;
+    }
 
     center[0] = 0.5 * canvas.width;
     center[1] = 0.5 * canvas.height;
@@ -188,15 +252,10 @@ export const Vortex = (props) => {
   const renderGlow = (
     canvas,
     ctx,
+    blurValue,
   ) => {
     ctx.save();
-    ctx.filter = "blur(8px) brightness(200%)";
-    ctx.globalCompositeOperation = "lighter";
-    ctx.drawImage(canvas, 0, 0);
-    ctx.restore();
-
-    ctx.save();
-    ctx.filter = "blur(4px) brightness(200%)";
+    ctx.filter = `blur(${blurValue}px) brightness(${isMobile ? '150%' : '200%'})`;
     ctx.globalCompositeOperation = "lighter";
     ctx.drawImage(canvas, 0, 0);
     ctx.restore();
@@ -220,17 +279,30 @@ export const Vortex = (props) => {
     }
   };
 
+  // Pause animation when tab is not visible (mobile optimization)
   useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden && animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+        animationFrameId.current = null;
+      } else if (!document.hidden && !animationFrameId.current) {
+        setup();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
     setup();
     window.addEventListener("resize", handleResize);
 
     return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener("resize", handleResize);
       if (animationFrameId.current) {
         cancelAnimationFrame(animationFrameId.current);
       }
     };
-  }, []);
+  }, [isMobile]); // Re-run effect when device type changes
 
   return (
     <div className={cn("relative h-full w-full", props.containerClassName)}>
@@ -239,7 +311,10 @@ export const Vortex = (props) => {
         animate={{ opacity: 1 }}
         ref={containerRef}
         className="absolute inset-0 z-0 flex h-full w-full items-center justify-center bg-transparent">
-        <canvas ref={canvasRef}></canvas>
+        <canvas 
+          ref={canvasRef}
+          className={isMobile ? "mobile-optimized-canvas" : ""}
+        ></canvas>
       </motion.div>
       <div className={cn("relative z-10", props.className)}>
         {props.children}

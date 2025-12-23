@@ -8,22 +8,9 @@ const SmokeScene = memo(() => (
     <directionalLight position={[10, 10, 5]} intensity={1} />
 
     <Smoke
-      color="#36f73d"
-      opacity={0.5}
-      segments={15}
-      position={[-3, -2, 0]}
-      scale={[2, 2, 2]}
-      rotation={[0.05, 0.05, 0]}
-      windStrength={[0.08, 0.03, 0]}
-      enableWind={false}
-      turbulenceStrength={[0.06, 0.04, 0.02]}
-      enableTurbulence={true}
-    />
-
-    <Smoke
       color="#09fa05"
       opacity={0.5}
-      segments={15}
+      segments={10}
       position={[3, 2, 0]}
       scale={[3, 1, 1]}
       rotation={[0, 100, -0.07]}
