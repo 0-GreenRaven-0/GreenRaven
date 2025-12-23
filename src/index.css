@@ -68,7 +68,7 @@ background-size: cover;
 
 @layer components{
     .name{
-      @apply text-6xl md:text-8xl xl:text-8xl font-semibold text-center
+      @apply text-5xl md:text-8xl xl:text-8xl font-semibold text-center
     }
 
     .my-name{
