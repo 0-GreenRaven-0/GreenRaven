@@ -2,7 +2,7 @@ import AudioPanel from "../Utility/AudioPanel"
 
 const Intro = ({button}) => {
   return (
-    <div className='bg-black h-screen w-screen text-white flex flex-col items-center justify-start xl:justify-center pt-15 md:pt-40 xl:pt-0 gap-1 relative overflow-hidden'>
+    <div className='bg-black h-screen w-screen text-white flex flex-col items-center justify-center pt-15 md:pt-40 xl:pt-0 gap-1 relative overflow-hidden'>
 
 
     <div className="hidden md:block absolute bottom-0 left-15">
@@ -42,8 +42,9 @@ const Intro = ({button}) => {
       <h2>Thy Humble</h2>
       <h1 className='name text-shadow-drop-center'>Green Raven</h1>
       <h2 className="relative z-150 px-1 text-center">Welcomes you into his portfolio realm</h2>
-      <div className="py-23 md:pt-0 block xl:hidden"/>
+       <div className="pb-55 md:pt-0 block xl:hidden"/>
        <AudioPanel/>
+
       {button}
     </div>
   )
