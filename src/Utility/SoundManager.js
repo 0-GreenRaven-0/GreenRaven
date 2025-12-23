@@ -27,10 +27,8 @@ class SoundManager {
     });
 
     // --- BACKGROUND MUSIC TRACKS (ORDER MATTERS) ---
+
     this.musicPlaylist = [
-      new Audio(
-        "https://ik.imagekit.io/greenraven/Green%20Raven/WhatsApp%20Audio%202025-12-23%20at%204.29.41%20PM.mp4?updatedAt=1766502698215"
-      ),
       new Audio(
         "https://ik.imagekit.io/greenraven/Green%20Raven/PageMusic.mp3"
       ),
