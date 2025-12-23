@@ -10,6 +10,7 @@ const Intro = ({button}) => {
          <video 
             className="absolute -top-55 left-1/2 -translate-x-1/2 w-53 overflow-hidden! z-100"
           src="https://ik.imagekit.io/greenraven/Green%20Raven/PixVerse_V5.5_Image_Text_360P_Seamless_looping%20(online-video-cutter.com)%20(1).mp4" 
+           style={{ pointerEvents: 'none', userSelect: 'none' }}
           autoPlay 
           muted // ← REQUIRED for autoplay
           loop 
@@ -26,6 +27,7 @@ const Intro = ({button}) => {
          <video 
             className=" absolute -top-40 md:-top-55 left-1/2 -translate-x-1/2 w-40 md:w-53 overflow-hidden! z-100"
           src="https://ik.imagekit.io/greenraven/Green%20Raven/PixVerse_V5.5_Image_Text_360P_Seamless_looping%20(online-video-cutter.com)%20(1).mp4" 
+           style={{ pointerEvents: 'none', userSelect: 'none' }}
           autoPlay 
           muted // ← REQUIRED for autoplay
           loop 
