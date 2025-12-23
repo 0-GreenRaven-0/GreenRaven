@@ -39,7 +39,7 @@ const AppContent = () => {
 
   const EnterButton = ({ onClick }) => (
     <div className="relative z-150">
-      <button className="enter-button md:pt-40 xl:pt-0 text-7xl xl:text-5xl" onClick={onClick}>
+      <button className="enter-button md:pt-40 xl:pt-0 text-4xl md:text-7xl xl:text-5xl" onClick={onClick}>
         Enter
       </button>
     </div>
