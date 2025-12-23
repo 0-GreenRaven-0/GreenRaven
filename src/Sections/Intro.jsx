@@ -1,0 +1,50 @@
+import AudioPanel from "../Utility/AudioPanel"
+
+const Intro = ({button}) => {
+  return (
+    <div className='bg-black h-screen w-screen text-white flex flex-col items-center justify-start xl:justify-center pt-15 md:pt-40 xl:pt-0 gap-1 relative overflow-hidden intro-bg'>
+
+
+    <div className="hidden md:block absolute bottom-0 left-15">
+        <div className="relative">
+         <video 
+            className="absolute -top-55 left-1/2 -translate-x-1/2 w-53 overflow-hidden! z-100"
+          src="https://ik.imagekit.io/greenraven/Green%20Raven/PixVerse_V5.5_Image_Text_360P_Seamless_looping%20(online-video-cutter.com)%20(1).mp4" 
+          autoPlay 
+          muted // ← REQUIRED for autoplay
+          loop 
+          playsInline // ← Important for mobile
+          
+        />
+            <img className="w-60 z-50 relative" src="https://ik.imagekit.io/greenraven/Green%20Raven/ChatGPT%20Image%20Dec%2016,%202025,%2005_17_32%20PM.png"/>
+        </div>
+  
+    </div>
+
+    <div className=" absolute bottom-0 md:right-15">
+        <div className="relative">
+         <video 
+            className=" absolute -top-40 md:-top-55 left-1/2 -translate-x-1/2 w-40 md:w-53 overflow-hidden! z-100"
+          src="https://ik.imagekit.io/greenraven/Green%20Raven/PixVerse_V5.5_Image_Text_360P_Seamless_looping%20(online-video-cutter.com)%20(1).mp4" 
+          autoPlay 
+          muted // ← REQUIRED for autoplay
+          loop 
+          playsInline // ← Important for mobile
+          
+        />
+            <img className="w-45 md:w-60 z-50 relative" src="https://ik.imagekit.io/greenraven/Green%20Raven/ChatGPT%20Image%20Dec%2016,%202025,%2005_17_32%20PM.png"/>
+        </div>
+  
+    </div>
+
+      <h2>Thy Humble</h2>
+      <h1 className='name text-shadow-drop-center'>Green Raven</h1>
+      <h2 className="relative z-150">Welcomes you into his portfolio realm</h2>
+      <div className="py-23 md:pt-0 block xl:hidden"/>
+       <AudioPanel/>
+      {button}
+    </div>
+  )
+}
+
+export default Intro
