@@ -2,10 +2,11 @@ import { useState, useEffect } from "react";
 import MainPage from "./Sections/MainPage";
 import Intro from "./Sections/Intro";
 import { SoundProvider, useSound } from "./Utility/SoundContext";
+import CollapsibleAudioPanel from "./Utility/CollapsibleAudioPanel";
 
 const AppContent = () => {
   const sound = useSound();
-
+const [hasEntered, setHasEntered] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [showMainPage, setShowMainPage] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
@@ -13,6 +14,7 @@ const AppContent = () => {
 
   const handleEnterClick = () => {
     sound.playSFX("buttonClick");
+       setHasEntered(true);
     sound.playMusic(); // ← Start music on Enter
     setIsTransitioning(true);
     setShowBlackOverlay(true);
@@ -47,6 +49,7 @@ const AppContent = () => {
 
   return (
     <div className="app-container relative min-h-screen w-full overflow-hidden">
+       {hasEntered && <CollapsibleAudioPanel sound={sound} />}
       <div
         className={`fixed inset-0 bg-black z-[9999] transition-opacity duration-1000 ease-in-out ${
           showBlackOverlay ? "opacity-100" : "opacity-0 pointer-events-none"

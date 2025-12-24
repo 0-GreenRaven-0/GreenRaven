@@ -10,18 +10,22 @@ const TheChronicle = ({ onBack }) => {
 
   // Example data structure - uncomment and fill when ready
   const emailProjects = [
-    // { id: 1, title: 'Welcome Email Sequence', link: 'https://example.com' },
-    // { id: 2, title: 'Product Launch Campaign', link: 'https://example.com' },
+    { id: 1, title: 'Can dropshipping actually replace your 9-5?', link: 'https://docs.google.com/document/d/1-cjtVeZ0HH7MQd1sDBY53bVHzcisi-FNa9ErdzRCPbw/edit?usp=sharing' },
+     { id: 2, title: "'But I don't have enough money yet...'", link: 'https://docs.google.com/document/d/1x_-YCg7LA3Pcqz1rK1dzW6eOwmOM8JY9YcsgntOIRxE/edit?usp=sharing' },
+     { id: 3, title: "Did you check out the guide?", link: 'https://docs.google.com/document/d/19LWMcsUKEBnYhOgO3sMWpPX6JfVn90wpMQhemCMd1Xw/edit?usp=sharing' },
+     { id: 4, title: "From Broke to Business Owner, Real Stories", link: 'https://docs.google.com/document/d/1NLUjTNCKXmHLMNvqOowRnfYl6LXutbNBn4vhiQoa_Mc/edit?usp=sharing' },
+     { id: 5, title: "Others already started, why not you?", link: 'https://docs.google.com/document/d/16HCaFuFwyPQV4Lq0V7X_tuDmKNvu_8fjmpSlKOUWJ4g/edit?usp=sharing' },
+     { id: 6, title: "How I Started With $300 (And What I Learned)", link: 'https://docs.google.com/document/d/13zXM_ZappK5HXmco4wPJrfNLhdLGCz89Bupj6eNuERo/edit?usp=sharing' },
   ];
 
   const pageProjects = [
-    // { id: 1, title: 'SaaS Landing Page', link: 'https://example.com', image: 'https://via.placeholder.com/400x300' },
+    { id: 1, title: 'MJ Dropshipping Saas', link: 'https://mjbusiness.onrender.com', image: 'https://ik.imagekit.io/greenraven/Green%20Raven/Screenshot%202025-12-24%20194358.png' },
     // { id: 2, title: 'Product Sales Page', link: 'https://example.com', image: null }, // will use placeholder
   ];
 
   const scriptProjects = [
-    // { id: 1, title: 'Facebook Ad Script', link: 'https://example.com' },
-    // { id: 2, title: 'YouTube Pre-roll Script', link: 'https://example.com' },
+     { id: 1, title: 'Saas Selling Ad Script', link: 'https://docs.google.com/document/d/1Q-0gI_JhTbSeZ7IGKBdXdKyWAbv3UTNi5r4MK0j3lwg/edit?usp=sharing' },
+    { id: 2, title: 'Dropshipping Community Ad Script', link: 'https://docs.google.com/document/d/1HpLbYIA--Yj1N5woG2y2hvaJuMRqykDQDlbMpwb-JfE/edit?usp=sharing' },
   ];
 
   const sections = [
@@ -127,11 +131,11 @@ const TheChronicle = ({ onBack }) => {
   };
 
   return (
-    <div className='section the-chronicle px-4 md:px-8 '>
+    <div className='section the-chronicle px-4 md:px-8 overflow-auto!'>
      <BackButton onBack={onBack}/>
 
       <div className='flex flex-col justify-center items-center'>
-        <h1 className='py-8 text-shadow-drop-center text-5xl md:text-6xl'>My Projects</h1>
+        <h1 className='pb-8 text-shadow-drop-center text-5xl md:text-6xl'>My Projects</h1>
 
         {!selectedSection ? (
           <div 

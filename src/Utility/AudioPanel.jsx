@@ -21,9 +21,10 @@ const AudioPanel = () => {
 
               if (next) {
                 sound.enableMusic();
-                sound.playMusic();
+                // Don't auto-play, let user start it manually if needed
+                // Or if you want it to resume: sound.playMusic();
               } else {
-                sound.disableMusic();
+                sound.disableMusic(); // This now properly stops the music
               }
             }}
             className={`p-4 md:p-6 xl:p-4 rounded-lg transition-all duration-300 cursor-pointer ${

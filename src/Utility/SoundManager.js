@@ -215,11 +215,19 @@ class SoundManager {
   enableMusic() {
     this.musicEnabled = true;
   }
-
-  disableMusic() {
-    this.musicEnabled = false;
-    this.stopMusic();
+  
+disableMusic() {
+  this.musicEnabled = false;
+  
+  // Immediately stop any playing music
+  if (this.currentMusic) {
+    this.stopTrackCheck();
+    this.currentMusic.pause();
+    this.currentMusic.currentTime = 0;
+    this.currentMusic.volume = 0;
+    this.currentMusic = null;
   }
+}
 
   enableSFX() {
     this.sfxEnabled = true;
