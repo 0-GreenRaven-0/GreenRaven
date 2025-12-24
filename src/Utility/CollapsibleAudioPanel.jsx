@@ -7,18 +7,18 @@ const CollapsibleAudioPanel = ({ sound }) => {
   const [sfxEnabled, setSfxEnabled] = useState(true);
 
   return (
-    <div className="fixed top-10 right-4 z-[9999]">
+    <div className="fixed top-12 right-4 z-[9999]">
       {/* Collapsed State - Just Icons */}
       {!isOpen && (
         <div 
           onClick={() => setIsOpen(true)}
-          className="flex gap-2 bg-black/60 backdrop-blur-sm p-3 rounded-lg cursor-pointer hover:bg-black/70 transition-all"
+          className="flex gap-2 bg-black/25 p-3 rounded-lg cursor-pointer hover:bg-black/70 transition-all"
         >
-          <FaMusic className={`text-xl ${musicEnabled ? 'text-green-400' : 'text-gray-500'}`} />
+          <FaMusic className={`text-xl ${musicEnabled ? 'text-green-400/15' : 'text-gray-500/15'}`} />
           {sfxEnabled ? (
-            <FaVolumeUp className="text-xl text-green-400" />
+            <FaVolumeUp className="text-xl text-green-400/15" />
           ) : (
-            <FaVolumeMute className="text-xl text-gray-500" />
+            <FaVolumeMute className="text-xl text-gray-500/15" />
           )}
           <FaChevronDown className="text-xl text-white/60" />
         </div>
