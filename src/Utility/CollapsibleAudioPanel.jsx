@@ -7,7 +7,7 @@ const CollapsibleAudioPanel = ({ sound }) => {
   const [sfxEnabled, setSfxEnabled] = useState(true);
 
   return (
-    <div className="fixed top-4 right-4 z-[9999]">
+    <div className="fixed top-10 right-4 z-[9999]">
       {/* Collapsed State - Just Icons */}
       {!isOpen && (
         <div 
@@ -50,6 +50,7 @@ const CollapsibleAudioPanel = ({ sound }) => {
 
                   if (next) {
                     sound.enableMusic();
+                    sound.playMusic(); // ← Added this line
                   } else {
                     sound.disableMusic();
                   }
