@@ -118,7 +118,7 @@ const Welcome = () => {
           
           {/* Content - ABOVE particles */}
           <div className="relative z-100 flex flex-col justify-center items-center h-screen w-full gap-5 py-10">
-            <h1 className="text-shadow-drop-center text-white">Pick a card and let's see what awaits you</h1>
+            <h1 className="text-shadow-drop-center text-white">Pick a card and let it decide your fate</h1>
             <Cards onCardClick={handleCardClick} />
           </div>
         </div>
