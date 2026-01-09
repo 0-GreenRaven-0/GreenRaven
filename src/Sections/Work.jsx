@@ -65,7 +65,7 @@ const Work = () => {
         }}
       >
         <div 
-          className="card bg-green-900 text-white z-400 work-bg" 
+          className="card bg-green-950 work-bg text-white z-400 " 
           id="card1"
           style={{
             ...card1Transform,
@@ -74,7 +74,7 @@ const Work = () => {
           }}
         >
           <div>
-            <h1 className="text-center">Projects I've done so far</h1>
+            <h1 className="text-center special">Projects I've done so far</h1>
           </div>
         </div>
         
