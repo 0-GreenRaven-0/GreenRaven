@@ -311,7 +311,7 @@ const Offer = () => {
   const baseSizes = calculateSizes(circleConfig.baseSize)
 
   return (
-    <div className='section relative text-white' id="offer" ref={containerRef} style={{ height: '100vh' }}>
+    <div className='section relative text-white bg-[#131613]' id="offer" ref={containerRef} style={{ height: '100vh' }}>
       <video 
         className="pt-50 sm:w-190 lg:w-120 sm:ml-30 sm:pt-90 lg:ml-[32%] lg:pt-35"
         src='spellbook.mp4'
