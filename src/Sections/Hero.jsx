@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className='intro-bg relative section flex-center-main justify-start! pt-5 sm:pt-70 lg:pt-55 overflow-hidden animate-fadeIn'>
+    <div className='xl:intro-bg relative section flex-center-main justify-start! pt-5 sm:pt-70 lg:pt-55 overflow-hidden animate-fadeIn'>
       <h3 className="special relative z-100">Your Humble</h3>
      <h1 className='name text-shadow-drop-center relative z-100'>Green Raven</h1>
       <h3 className="special relative z-100">
