@@ -112,11 +112,11 @@ background-position: center;
   }
 
   .goblet{
-    @apply w-40 sm:w-90 lg:w-50
+    @apply w-38 sm:w-90 lg:w-50
   }
 
   .fire{
-    @apply w-53 sm:w-70
+    @apply w-50 sm:w-70
   }
 
   .offer-icon{

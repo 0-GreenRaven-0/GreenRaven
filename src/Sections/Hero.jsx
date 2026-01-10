@@ -4,9 +4,6 @@ const Hero = () => {
       <h3 className="special relative z-100">Your Humble</h3>
      <h1 className='name text-shadow-drop-center relative z-100'>Green Raven</h1>
       <h3 className="special relative z-100">
-      Copywriter & Developer
-      </h3>
-      <h3 className="special relative z-100">
       At your service!
       </h3>
 <p className="lg:w-[50%] text-center text-white special">I write conversion-focused copy and build interactive experiences that turn cold prospects into paying customers</p>
@@ -33,7 +30,7 @@ const Hero = () => {
     <div className="absolute -bottom-4 md:right-15">
         <div className="relative">
          <video 
-            className="absolute -top-40 md:-top-55 left-1/2 -translate-x-1/2 fire overflow-hidden! z-100"
+            className="absolute -top-38 md:-top-55 left-1/2 -translate-x-1/2 fire overflow-hidden! z-100"
           src="https://ik.imagekit.io/greenraven/Green%20Raven/PixVerse_V5.5_Image_Text_360P_Seamless_looping%20(online-video-cutter.com)%20(1).mp4" 
            style={{ pointerEvents: 'none', userSelect: 'none' }}
           autoPlay 
