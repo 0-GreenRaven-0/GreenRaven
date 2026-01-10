@@ -72,6 +72,7 @@ const Offer = () => {
     
     return (
       <div className="relative flex items-center justify-center" style={{ minWidth: `${baseSizes.circle}px`, minHeight: `${baseSizes.circle}px` }}>
+      
         <div 
           ref={magicCircleRef}
           className="absolute border-4 rounded-full magic-circle"
@@ -221,6 +222,7 @@ const Offer = () => {
 
   return (
     <div className='section relative text-white bg-[#131613] py-5' id="offer">
+        <h1 className="special text-center py-5">My Abilities</h1>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {offers.map((offer, index) => (
