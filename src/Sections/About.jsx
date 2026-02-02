@@ -26,7 +26,7 @@ const About = () => {
 
 
   return (
-    <div className='pb-10 relative lg:min-h-screen ' id='about'>
+    <div className='pb-10 relative' id='about'>
       {/* Animated gate */}
       <h1 className='absolute top-70 -translate-x-1/2 left-1/2 -translate-y-1/2 text-white z-150 name' id='intro'>About Me</h1>
        <div id='gate-left' className='absolute left-0 w-[50vw] h-screen bg-green-700 z-100 left-door'/>
