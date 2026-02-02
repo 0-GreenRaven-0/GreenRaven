@@ -34,7 +34,7 @@ const About = () => {
       {/* Inner content */}
         <div id='inner-content' className='flex-responsive relative from-zinc-500 pt-15 p-2 sm:pt-30 gap-5! md:px-5'>
           <img 
-            loading='lazy' 
+            loading='eager' 
             className='w-120 rounded-2xl'
             alt='Matthew Hamdesh' 
             src='https://ik.imagekit.io/greenraven/Green%20Raven/matthew1.jpeg'
