@@ -1,15 +1,30 @@
-
 const Projects = () => {
+  const projects = [
+    {
+      title: "DropArabia, the first Dropshipping Platform in Lebanon",
+      image: "https://ik.imagekit.io/greenraven/Green%20Raven/project1.png",
+      link: "https://join.droparabia.com"
+    },
+  ]
 
   return (
-    <div className="section text-white relative z-100" id="projects">
-      <h2 className="text-center pt-10">Projects I've done so far</h2>
-      <br/>
-      <div className="grid grid-cols-1 ">
-        <div className="flex-cols border p-2 rounded-2xl">
-            <img src="https://ik.imagekit.io/greenraven/Green%20Raven/Screenshot%202025-12-24%20194358.png?updatedAt=1766598334861"/>
-            <h2 className="text-center">First Dropshipping SAAS in MENA region</h2>
-            <p>A full marketing funnel that includes a custom designed landing page, email marketing campaign, strong copy, great structure and system to qualify leads</p>
+    <div className="section text-white relative bg-light-bg" id="projects">
+      <div className="container mx-auto px-4">
+        <h1 className="text-center py-5 special">Projects I worked on</h1>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {projects.map((project, index) => (
+            <div key={index} onClick={() =>{window.open(project.link)}} className="rounded-xl overflow-hidden bg-black/40 border border-gray-700 cursor-pointer hover:scale-103 transition-all duration-200">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full object-cover"
+              />
+              <div className="p-4">
+                <h3 className="text-lg font-semibold text-center">{project.title}</h3>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

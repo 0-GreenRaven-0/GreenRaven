@@ -1,4 +1,3 @@
-import {DraggableCardBody, DraggableCardContainer} from '../utility/DraggableCardBody';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -10,7 +9,7 @@ const About = () => {
         trigger: "#about",
         start: "top top",
         end: "bottom bottom",
-        scrub: 2,
+        scrub: 4,
         pin: true
       
       },
@@ -18,83 +17,35 @@ const About = () => {
     })
 
     timeline
-    .to("#intro", { opacity: 0, y: -50, duration: 1 })
-    .to("#gate-left", { x: "-100vw", duration: 2 })
-    .to("#gate-right", { x: "100vw", duration: 2 }, "<")
-    .from("#inner-content", { opacity: 0, y: 20, duration: 1.5 })
+    .to("#intro", { opacity: 0, y: -50, duration: 2 })
+    .to("#gate-left", { x: "-100vw", duration: 4 })
+    .to("#gate-right", { x: "100vw", duration: 4 }, "<")
+    .from("#inner-content", { opacity: 0, y: 20, duration: 3 })
   })
 
-    const items = [
-    {
-      title: "Me in the Gym",
-      image:
-        "https://ik.imagekit.io/greenraven/Green%20Raven/My%20Pictures/WhatsApp%20Image%202025-12-22%20at%2014.44.53_8f6fd2f9.jpg",
-      className: "absolute top-10 left-[20%] rotate-[-5deg]",
-    },
-    {
-      title: "Please Ignore",
-      image:
-        "https://ik.imagekit.io/greenraven/Green%20Raven/My%20Pictures/WhatsApp%20Image%202025-12-22%20at%2014.44.57_8265636d.jpg",
-      className: "absolute top-40 left-[25%] rotate-[-7deg]",
-    },
-    {
-      title: "Taekwondo",
-      image:
-        "https://ik.imagekit.io/greenraven/Green%20Raven/My%20Pictures/WhatsApp%20Image%202025-12-22%20at%2014.44.55_e3469993.jpg",
-      className: "absolute top-5 left-[40%] rotate-[8deg]",
-    },
-    {
-      title: "My Pet",
-      image:
-        "https://ik.imagekit.io/greenraven/Green%20Raven/My%20Pictures/WhatsApp%20Image%202025-12-22%20at%2014.44.57_ec1997e0.jpg",
-      className: "absolute top-32 left-[55%] rotate-[10deg]",
-    },
-  ];
+
 
   return (
-    <div className='section relative text-white' id='about'>
+    <div className='pb-10 relative min-h-screen ' id='about'>
       {/* Animated gate */}
       <h1 className='absolute top-70 -translate-x-1/2 left-1/2 -translate-y-1/2 text-white z-150 name' id='intro'>About Me</h1>
        <div id='gate-left' className='absolute left-0 w-[50vw] h-screen bg-green-700 z-100 left-door'/>
        <div id='gate-right' className='absolute right-0 w-[50vw] h-screen bg-green-900 z-100 right-door'/>
       {/* Inner content */}
-        <div id='inner-content' className='flex-responsive relative from-zinc-500 pt-15 sm:pt-30'>
-          <div className='lg:w-[70%]'>
-            <h2>Hi! My name is <span className='text-primary'>Matthew Hamdesh</span> </h2>
-            <br/>
-          <p>
-            I wield copywriting as a strategic weapon and coding as a creative forge. This combination allows me to build complete marketing systems from the ground up—crafting messages that resonate deeply while engineering the unique experiences that make them unforgettable.
-          </p>
-
-          <br/>
-
-          <p>
-            My process begins with understanding your territory: studying your offer, your audience, and your competitors. Then I forge campaigns that stand apart, where every word is chosen to connect and every interaction is designed to convert.
-          </p>
-
-          <br/>
-
-          <p>
-            I also build and configure CRM systems to manage your entire funnel from the ground up. This ensures seamless automation and maximum email deliverability, so your message always reaches its intended audience.
-          </p>
-            <br/>
-            <h3>Drag and move the images</h3>
+        <div id='inner-content' className='flex-responsive relative from-zinc-500 pt-15 p-2 sm:pt-30 gap-5! md:px-5'>
+          <img 
+            loading='lazy' 
+            className='w-120 rounded-2xl'
+            alt='Matthew Hamdesh' 
+            src='https://ik.imagekit.io/greenraven/Green%20Raven/matthew1.jpeg'
+          />
+          
+          <div className='flex-cols'>
+            <h1 className='text-green-500 special font-bold'>Hi! I'm Matthew Hamdesh</h1>
+            <h2>Funnel Architect & Copywriter</h2>
+            <p className='text-white'>I took my love for coding and my copywriting skills and combined them into a career where I help businesses increase revenue, build trust with their ideal audience, and stand out in the digital market.</p>
+            <p className='text-white'>I love exploring different brands and businesses in the digital world and seeing the passion behind each one, hopping to be part of building their empires, leaving my mark while gaining knowledge about different niches and the value they bring.</p>
           </div>
-
-           <DraggableCardContainer className="relative z-10 flex h-screen w-full items-center justify-center overflow-clip">
-             {items.map((item, index) => (
-               <DraggableCardBody key={index} className={item.className}>
-                 <img
-                   src={item.image}
-                   alt={item.title}
-                   className="pointer-events-none relative z-10 h-40 w-40 sm:h-100 sm:w-100 lg:h-60 object-cover"
-                 />
-                 <h3 className="mt-4 text-center text-lg sm:text-4xl lg:text-xl font-bold text-white">
-                   {item.title}
-                 </h3>
-               </DraggableCardBody>
-             ))}
-           </DraggableCardContainer>
         </div>
     </div>
   )

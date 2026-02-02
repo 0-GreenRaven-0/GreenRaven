@@ -24,7 +24,7 @@ const ParticleBackground = () => {
 
     particles: {
       number: {
-        value: 150,
+        value: 200,
         density: { enable: true, area: 2000 },
       },
 
@@ -39,7 +39,7 @@ const ParticleBackground = () => {
         },
       },
 
-      opacity: { value: 0.4 },
+      opacity: { value: 0.3 },
       size: { value: { min: 10, max: 25 } },
 
       rotate: {

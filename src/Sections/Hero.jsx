@@ -1,51 +1,49 @@
+import { useState, useEffect } from 'react'
+
+
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    // Trigger fade-in after component mounts
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [])
+
   return (
-    <div className='bg-[#050500] relative section flex-center-main justify-start! pt-5 sm:pt-70 lg:pt-55 overflow-hidden animate-fadeIn'>
-      <h3 className="special relative z-100">Your Humble</h3>
-     <h1 className='name text-shadow-drop-center relative z-100'>Green Raven</h1>
-      <h3 className="special relative z-100">
-      At your service!
-      </h3>
-<p className="lg:w-[50%] text-center text-white special">I write conversion-focused copy and build interactive experiences that turn cold prospects into paying customers</p>
+    <>
+      {/* Black overlay that fades out */}
+      <div 
+        className={`fixed inset-0 bg-black z-[9999] transition-opacity duration-1000 pointer-events-none ${
+          isVisible ? 'opacity-0' : 'opacity-100'
+        }`}
+      />
 
-       <div className="hidden md:block absolute bottom-0 left-15">
-        <div className="relative">
-         <video 
-            className="absolute -top-55 left-1/2 -translate-x-1/2 fire overflow-hidden! z-100"
-          src="https://ik.imagekit.io/greenraven/Green%20Raven/PixVerse_V5.5_Image_Text_360P_Seamless_looping%20(online-video-cutter.com)%20(1).mp4" 
-           style={{ pointerEvents: 'none', userSelect: 'none' }}
-          autoPlay 
-          muted
-          loop 
-          playsInline
-          
-        />
-            <img className="goblet z-50 relative" src="https://ik.imagekit.io/greenraven/Green%20Raven/ChatGPT%20Image%20Dec%2016,%202025,%2005_17_32%20PM.png"/>
-
-
+      <div className="section relative z-100 flex-responsive text-center lg:text-left">
+       
+        <div className="lg:flex-1">
+          <img loading="eager" src="https://ik.imagekit.io/greenraven/Green%20Raven/Green%20Raven.png?updatedAt=1766511556233" className="logo-img m-auto"/>
         </div>
-  
-    </div>
 
-    <div className="absolute -bottom-4 md:right-15">
-        <div className="relative">
-         <video 
-            className="absolute -top-38 md:-top-55 left-1/2 -translate-x-1/2 fire overflow-hidden! z-100"
-          src="https://ik.imagekit.io/greenraven/Green%20Raven/PixVerse_V5.5_Image_Text_360P_Seamless_looping%20(online-video-cutter.com)%20(1).mp4" 
-           style={{ pointerEvents: 'none', userSelect: 'none' }}
-          autoPlay 
-          muted
-          loop 
-          playsInline
-          
-        />
-            <img className="goblet z-50 relative" src="https://ik.imagekit.io/greenraven/Green%20Raven/ChatGPT%20Image%20Dec%2016,%202025,%2005_17_32%20PM.png"/>
-         
+        <div className="flex-cols lg:flex-2">
+          <h1 className="name text-shadow-drop-green lg:text-left">Matthew Hamdesh</h1>
+          <h2 className="special text-white">Revenue Systems Architect</h2>
+          <p className="special text-white font-light">Every great product needs a conquest strategy. I architect complete revenue systems for digital businesses. Precise, powerful, and built to dominate.</p>
+          <br/>
+          <div>
+            <h3 className="special pb-4 text-white">
+              Let's discuss how we can strengthen your offer
+            </h3>
+            <button className="cta-button special" onClick={() => {window.open("https://calendly.com/greenraven1000/business-call")}}>
+              Book a Call
+            </button>
+          </div>
         </div>
-  
-    </div>
-
-    </div>
+      </div>
+    </>
   )
 }
 
