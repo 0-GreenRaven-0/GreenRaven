@@ -3,7 +3,7 @@ import { FaThreads } from 'react-icons/fa6';
 
 const Contact = () => {
   return (
-    <div className='py-10 flex-cols gap-5! text-center text-white'>
+    <div className='py-10 flex-cols gap-5! text-center text-white p-2'>
       <h2 className="text-shadow-drop-center special ">
         Let's build your conquest campaign
       </h2>
