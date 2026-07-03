@@ -1,0 +1,444 @@
+---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<BaseLayout title="Your Name — Copywriter">
+
+  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <section id="hero" class="hero-section">
+    <div class="stars-container" id="stars-container"></div>
+    <nav class="hero-nav">
+      <button class="hamburger md:hidden" id="hamburger" aria-label="Menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#who" class="nav-link">Who's This For</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#portfolio" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Work With Me</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+
+      <h1 class="hero-title">
+        Let my powerful words bestow<br />conversion &amp; trust upon your offer
+      </h1>
+      <p class="hero-subheadline">
+        And let my words revoke the accursed AI and its generic writing that repels your qualified customers<br />
+        <span class="font-fell text-cream/40 text-[0.75rem] tracking-normal normal-case">(No offense to the AI that helped me build this website...)</span>
+      </p>
+
+
+    </div>
+  </section>
+
+  <!-- ─── WHO IS THIS FOR ──────────────────────────────────────── -->
+  <section id="who" class="who-section-part2">
+    <div class="who-wall-wrap who-wall-left">
+      <div class="who-triangle who-triangle-left"></div>
+      <img src="/frame 1.png" alt="" class="who-wall-corner who-wall-tl" />
+      <h2 class="who-wall-heading">Who Is This For?</h2>
+      <p class="who-wall-text who-wall-text-left">I help high-ticket sales coaches sell their mentorships to the people who want to build a better career path, time flexibility and slowly make their way towards financial freedom, through carefully and human crafted content and funnels.</p>
+    </div>
+    <div class="who-wall-wrap who-wall-right">
+      <div class="who-triangle who-triangle-right"></div>
+<p class="who-wall-text who-wall-text-right">Because if someone's out there who's going to understand the importance of humanely-crafted writing, it's the high-ticket sales coaches. After all, high-ticket coaching is all about providing guidance and legitimacy to someone before making a decision to buy.</p>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ──────────────────────────────────────────────── -->
+  <section id="services" class="services-section">
+    <div class="services-container">
+      <h2 class="section-heading">And that's exactly what I'm here to do</h2>
+      <div class="carousel-track-wrap">
+      <div id="tab-services" class="services-grid">
+        <div class="service-card">
+          <div class="service-icon-wrap"><span class="service-icon-ring"></span><Icon name="lucide:pen-tool" class="service-icon" /></div>
+          <h3 class="service-card-title">Copywriting</h3>
+          <p class="service-card-text">I rely on my own writing and communication skills to write your copies from web pages, emails and scripts. I don't use AI in my copywriting unless if it's for research and fixing grammar.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><span class="service-icon-ring"></span><Icon name="lucide:scroll-text" class="service-icon" /></div>
+          <h3 class="service-card-title">Scriptwriting</h3>
+          <p class="service-card-text">I script VSLs and social media content depending on your funnel's needs and the specific actions we want your audience to take.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><span class="service-icon-ring"></span><Icon name="lucide:layout" class="service-icon" /></div>
+          <h3 class="service-card-title">Webpages</h3>
+          <p class="service-card-text">Besides the writing part, I'll handle building a fully functional, ready-to-use landing page or sales page and connected directly to Google Analytics for performance tracking.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><span class="service-icon-ring"></span><Icon name="lucide:workflow" class="service-icon" /></div>
+          <h3 class="service-card-title">Funnel Creation</h3>
+          <p class="service-card-text">Depending on your offer and the goal you wanna achieve, I'll create the suitable funnel for your offer from the moment they click the ads to the part where they become your buyers.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><span class="service-icon-ring"></span><Icon name="lucide:search-check" class="service-icon" /></div>
+          <h3 class="service-card-title">Copy Audit</h3>
+          <p class="service-card-text">I'll audit your copies and funnels and provide you feedbacks on what could be done better and which are to improve (and by audit I mean my own audit, not AI).</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><span class="service-icon-ring"></span><Icon name="lucide:mail" class="service-icon" /></div>
+          <h3 class="service-card-title">Email Marketing</h3>
+          <p class="service-card-text">I'll set up your CRM system (in case you haven't set one already) and write your email campaigns while making sure they don't end up in the spam folders.</p>
+        </div>
+      </div>
+      </div><!-- end carousel-track-wrap -->
+    </div>
+  </section>
+
+  <!-- ─── PORTFOLIO ────────────────────────────────────────────── -->
+  <section id="portfolio" class="portfolio-section">
+    <div class="portfolio-container">
+      <h2 class="section-heading" id="portfolio-heading">Gaze upon my portfolio</h2>
+
+      <div class="portfolio-grid">
+        <button class="portfolio-card" data-category="landing-page">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <div class="portfolio-card-glass">
+              <div class="portfolio-card-shine"></div>
+            </div>
+            <Icon name="lucide:layout" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Landing Page</h3>
+        </button>
+        <button class="portfolio-card" data-category="sales-page">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <div class="portfolio-card-glass">
+              <div class="portfolio-card-shine"></div>
+            </div>
+            <Icon name="lucide:badge-dollar-sign" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Sales Page</h3>
+        </button>
+        <button class="portfolio-card" data-category="email-campaign">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <div class="portfolio-card-glass">
+              <div class="portfolio-card-shine"></div>
+            </div>
+            <Icon name="lucide:mail" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Email Campaign</h3>
+        </button>
+        <button class="portfolio-card" data-category="instagram-content">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <div class="portfolio-card-glass">
+              <div class="portfolio-card-shine"></div>
+            </div>
+            <Icon name="lucide:instagram" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Instagram Content</h3>
+        </button>
+        <button class="portfolio-card" data-category="webinar-funnel">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <div class="portfolio-card-glass">
+              <div class="portfolio-card-shine"></div>
+            </div>
+            <Icon name="lucide:presentation" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Webinar Funnel</h3>
+        </button>
+      </div>
+
+      <!-- Project list overlay -->
+      <div id="portfolio-overlay" class="portfolio-overlay">
+        <button id="portfolio-back" class="portfolio-back">
+          <Icon name="lucide:arrow-left" class="w-5 h-5" /> Back
+        </button>
+        <h3 id="portfolio-overlay-title" class="portfolio-overlay-title"></h3>
+        <ul id="portfolio-project-list" class="portfolio-project-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ────────────────────────────────────────────────── -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <h2 class="section-heading">Meet<br />Matthew Hamdesh</h2>
+    </div>
+
+    <div class="about-zigzag">
+        <div class="about-stair-row">
+          <div class="about-stairs-up">
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+          </div>
+          <div class="about-frame about-frame-right"></div>
+          <p class="about-desc about-desc-right">I was pursuing a career in web development but ended up leaning more into copywriting because this skill allowed me to expand my knowledge on different kinds of online businesses never in my life thought I'd be able to comprehend.</p>
+        </div>
+
+        <div class="about-stair-row">
+          <div class="about-stairs-down">
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+          </div>
+          <div class="about-frame about-frame-left"></div>
+          <p class="about-desc about-desc-left">I'm a strange fella I'll tell you that, I despise smoking, I don't drink at all, my entertainment is mostly going out and dark fantasy video games. I have this weird obsession with the color green to the point my clothes and all my items are green.</p>
+        </div>
+
+        <div class="about-stair-row">
+          <div class="about-stairs-up">
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+            <div class="about-step"><div class="step-top"></div><div class="step-front"></div><div class="step-right"></div></div>
+          </div>
+          <div class="about-frame about-frame-right"></div>
+          <p class="about-desc about-desc-right">I like to work out in the gym and practice Taekwondo, so when you work with me you're also getting a copywriter ready to throw hands if someone dared to mess with you (once you pay me first that is :) )</p>
+        </div>
+    </div>
+
+  </section>
+
+  <!-- ─── CTA ──────────────────────────────────────────────────── -->
+  <section id="contact" class="cta-section">
+    <div class="cta-inner">
+      <h2 class="cta-heading">Do you wish to hand the fate of your business to generic AI writing?</h2>
+      <h2 class="cta-heading mt-8">Or do you wish to gain the trust and attention of your ideal customers?</h2>
+    </div>
+     <div class="cta-final">
+      <a class="cta-final-text">
+        Let's work together!
+      </a>
+     </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <p class="footer-text">© 2026 Green Raven. All rights reserved.</p>
+  </footer>
+
+<script>
+  const starsContainer = document.getElementById('stars-container')!;
+
+  function spawnStar() {
+    const star = document.createElement('span');
+    star.classList.add('shooting-star');
+    star.style.top = '0%';
+    star.style.left = `${10 + Math.random() * 80}%`;
+    const dur = 1.5 + Math.random() * 0.5;
+    star.style.animationDuration = `${dur}s`;
+    starsContainer.appendChild(star);
+    star.addEventListener('animationend', () => star.remove());
+    setTimeout(spawnStar, 4000 + Math.random() * 4000);
+  }
+  setTimeout(spawnStar, 1000);
+  setTimeout(spawnStar, 3000);
+
+  const hamburger = document.getElementById('hamburger')!;
+  const navLinksWrap = document.getElementById('nav-links')!;
+
+  const backdrop = document.createElement('div');
+  backdrop.style.cssText = `
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.55); z-index: 9998;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  `;
+  document.body.appendChild(backdrop);
+
+  function closeMenu() {
+    navLinksWrap.classList.add('closing');
+    backdrop.style.opacity = '0';
+    setTimeout(() => {
+      hamburger.classList.remove('open');
+      navLinksWrap.classList.remove('open');
+      navLinksWrap.classList.remove('closing');
+      backdrop.style.display = 'none';
+    }, 280);
+  }
+
+  backdrop.addEventListener('click', closeMenu);
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (navLinksWrap.classList.contains('open')) {
+      closeMenu();
+    } else {
+      if (navLinksWrap.parentElement !== document.body) {
+        document.body.appendChild(navLinksWrap);
+      }
+      backdrop.style.display = 'block';
+      requestAnimationFrame(() => { backdrop.style.opacity = '1'; });
+      hamburger.classList.add('open');
+      navLinksWrap.classList.add('open');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (navLinksWrap.classList.contains('open') && !navLinksWrap.contains(e.target as Node)) {
+      closeMenu();
+    }
+  });
+
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
+  const scrollWrap = document.querySelector('.parallax-wrap') as HTMLElement;
+
+  function smoothScrollTo(target: number, duration: number = 1000) {
+    const start = scrollWrap.scrollTop;
+    const distance = target - start;
+    let startTime: number | null = null;
+
+    function step(timestamp: number) {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+      scrollWrap.scrollTop = start + distance * ease;
+      if (elapsed < duration) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href')!);
+      if (target) {
+        smoothScrollTo((target as HTMLElement).offsetTop, 1200);
+      }
+      closeMenu();
+    });
+  });
+
+  type ListItem = { name: string; href: string };
+
+  const listData: Record<string, ListItem[]> = {
+    'copywriting':     [{ name: 'Portfolio Piece Title', href: '#' }, { name: 'Portfolio Piece Title', href: '#' }],
+    'scriptwriting':   [{ name: 'Portfolio Piece Title', href: '#' }, { name: 'Portfolio Piece Title', href: '#' }],
+    'webpages':        [{ name: 'Portfolio Piece Title', href: '#' }, { name: 'Portfolio Piece Title', href: '#' }],
+    'funnel-creation': [{ name: 'Portfolio Piece Title', href: '#' }, { name: 'Portfolio Piece Title', href: '#' }],
+    'email-marketing': [{ name: 'Portfolio Piece Title', href: '#' }, { name: 'Portfolio Piece Title', href: '#' }],
+  };
+
+  const titles: Record<string, string> = {
+    'copywriting':     'Copywriting',
+    'scriptwriting':   'Scriptwriting',
+    'webpages':        'Webpages',
+    'funnel-creation': 'Funnel Creation',
+    'email-marketing': 'Email Marketing',
+  };
+
+  const overlay = document.getElementById('portfolio-overlay')!;
+  const portfolioHeading = document.getElementById('portfolio-heading')!;
+  const overlayTitle = document.getElementById('portfolio-overlay-title')!;
+  const projectList = document.getElementById('portfolio-project-list')!;
+  const backBtn = document.getElementById('portfolio-back')!;
+  const portfolioGrid = document.querySelector('.portfolio-grid') as HTMLElement;
+
+  function renderList(items: ListItem[]) {
+    items.forEach(p => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = p.href;
+      a.textContent = p.name;
+      a.classList.add('portfolio-project-item');
+      a.style.opacity = '0';
+      a.style.transform = 'translateY(8px)';
+      li.appendChild(a);
+      projectList.appendChild(li);
+    });
+  }
+
+  function handleBackToGrid() {
+    const items = projectList.querySelectorAll<HTMLElement>('.portfolio-project-item');
+    items.forEach(item => { item.style.opacity = '0'; item.style.transform = 'translateY(8px)'; });
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      portfolioHeading.style.visibility = '';
+      portfolioGrid.style.visibility = '';
+      const gridCards = portfolioGrid.querySelectorAll<HTMLElement>('.portfolio-card');
+      gridCards.forEach(c => { c.style.opacity = '0'; c.style.transform = 'translateY(8px)'; });
+      requestAnimationFrame(() => {
+        gridCards.forEach((c, i) => {
+          setTimeout(() => { c.style.opacity = '1'; c.style.transform = 'translateY(0)'; }, i * 50);
+        });
+      });
+    }, 250);
+  }
+
+  backBtn.onclick = handleBackToGrid;
+
+  document.querySelectorAll<HTMLButtonElement>('.portfolio-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const category = card.dataset.category!;
+      overlayTitle.textContent = titles[category] ?? category;
+      projectList.innerHTML = '';
+      projectList.className = 'portfolio-project-list';
+      if (listData[category]) renderList(listData[category]);
+
+      const gridCards = portfolioGrid.querySelectorAll<HTMLElement>('.portfolio-card');
+      gridCards.forEach(c => { c.style.opacity = '0'; c.style.transform = 'translateY(8px)'; });
+      setTimeout(() => {
+        portfolioGrid.style.visibility = 'hidden';
+        portfolioHeading.style.visibility = 'hidden';
+        overlay.style.display = 'flex';
+        const items = projectList.querySelectorAll<HTMLElement>('.portfolio-project-item');
+        requestAnimationFrame(() => {
+          items.forEach((item, i) => {
+            setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'translateY(0)'; }, i * 80);
+          });
+        });
+      }, 250);
+    });
+  });
+</script>
+
+</BaseLayout>

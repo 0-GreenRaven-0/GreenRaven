@@ -1,0 +1,301 @@
+---
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<BaseLayout title="Your Name — Copywriter">
+
+  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <section id="hero" class="hero-section">
+    <div class="stars-container" id="stars-container"></div>
+    <nav class="hero-nav">
+      <a href="#who" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#portfolio" class="nav-link">Portfolio</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <div class="hero-content">
+
+      <h1 class="hero-title">
+        Bless your offer with<br />powerful &amp; high-converting words
+      </h1>
+      <p class="hero-subheadline">
+        And defy the accursed AI and its generic writing that's been repelling
+        your customers from ever making the decision to buy
+      </p>
+
+
+    </div>
+  </section>
+
+  <!-- ─── WHO IS THIS FOR ──────────────────────────────────────── -->
+  <section id="who" class="who-section">
+    <img src="/frame 1.png" alt="" class="who-frame-tl" />
+    <div class="who-content">
+      <h2 class="section-heading">Who Is This For?</h2>
+      <div class="who-columns">
+        <p class="who-lead">
+          We have reached an era where people are now a lot more skeptical than they've ever been
+          due to the presence and the constant abuse of AI to generate "ready-to-use" emails, ads,
+          website copies that barely reek of human tone. So if you're a career coach, an info seller,
+          a SaaS founder — or you're simply selling a product that's meant to reshape someone's
+          career path or their overall financial well-being.
+        </p>
+        <p class="who-lead">
+          You're gonna need words that scream human and realism in order for people to trust you
+          enough to hand you the fate of their financial life
+          <em>(and their money — which is why we're doing this whole thing, but more on that later…)</em>
+        </p>
+      </div>
+    </div>
+    <img src="/frame 2.png" alt="" class="who-frame-br" />
+  </section>
+
+  <!-- ─── SERVICES ──────────────────────────────────────────────── -->
+  <section id="services" class="services-section">
+    <div class="services-container">
+      <h2 class="section-heading">My Services</h2>
+      <div class="toggle-bar">
+        <button class="toggle-btn toggle-active" data-tab="services">Services</button>
+        <span class="toggle-divider"></span>
+        <button class="toggle-btn" data-tab="skills">Skills</button>
+      </div>
+      <div id="tab-services" class="services-grid">
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:layout" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Landing Page</h3>
+            <p class="service-card-text">A fully written landing page ready to introduce your brand to your future loyal fanbase.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:badge-dollar-sign" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Sales Page</h3>
+            <p class="service-card-text">Prove to your ideal customers that your offer is exactly what they've been looking for.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:presentation" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Webinar Funnel</h3>
+            <p class="service-card-text">Build trust fast by putting yourself in front of your audience in a live session.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:instagram" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Instagram Content</h3>
+            <p class="service-card-text">Grow your account with content made specifically for your target audience.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:mail" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Email Campaigns</h3>
+            <p class="service-card-text">Email marketing delivers a 36:1 ROI with full control over your leads list.</p>
+          </div>
+        </div>
+      </div>
+      <div id="tab-skills" class="services-grid" style="display:none;">
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:file-text" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Website Copies</h3>
+            <p class="service-card-text">Compelling website copy that speaks directly to your audience and drives action.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:megaphone" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Ads</h3>
+            <p class="service-card-text">High-converting ad copy for paid campaigns across all platforms.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:instagram" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Instagram Content</h3>
+            <p class="service-card-text">Scroll-stopping captions, carousels, and Reels scripts tailored to your brand.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:mail" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Emails</h3>
+            <p class="service-card-text">Sequences and campaigns that nurture leads and drive sales on autopilot.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:bar-chart-3" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Google Analytics</h3>
+            <p class="service-card-text">Data-driven insights to track performance and optimize your copy strategy.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon-wrap"><Icon name="lucide:code" class="service-icon" /></div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">Web Development</h3>
+            <p class="service-card-text">Building and deploying the pages and funnels that house your copy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PORTFOLIO ────────────────────────────────────────────── -->
+  <section id="portfolio" class="portfolio-section">
+    <img src="/frame 1.png" alt="" class="portfolio-frame-tl" />
+    <img src="/frame 3.png" alt="" class="portfolio-frame-tr" />
+    <div class="portfolio-container">
+      <h2 class="section-heading">Gaze upon my portfolio</h2>
+
+      <div class="portfolio-grid">
+        <a href="#" class="portfolio-card">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <Icon name="lucide:layout" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Landing Page</h3>
+        </a>
+        <a href="#" class="portfolio-card">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <Icon name="lucide:badge-dollar-sign" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Sales Page</h3>
+        </a>
+        <a href="#" class="portfolio-card">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <Icon name="lucide:mail" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Email Campaign</h3>
+        </a>
+        <a href="#" class="portfolio-card">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <Icon name="lucide:instagram" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Instagram Content</h3>
+        </a>
+        <a href="#" class="portfolio-card">
+          <div class="portfolio-card-frame">
+            <div class="portfolio-card-img"></div>
+            <Icon name="lucide:presentation" class="portfolio-card-icon" />
+          </div>
+          <h3 class="portfolio-card-title">Webinar Funnel</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ────────────────────────────────────────────────── -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <h2 class="section-heading">About Me</h2>
+    </div>
+
+    <div class="about-zigzag">
+        <svg class="about-stair-svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+          <polyline points="0,0 100,0 100,50 200,50 200,100 300,100 300,150 400,150 400,200 500,200 500,250 600,250 600,300 700,300 700,350 800,350" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" />
+        </svg>
+
+        <div class="about-img about-img-right">
+          <div class="about-frame"></div>
+        </div>
+
+        <svg class="about-stair-svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+          <polyline points="800,0 700,0 700,50 600,50 600,100 500,100 500,150 400,150 400,200 300,200 300,250 200,250 200,300 100,300 100,350 0,350" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" />
+        </svg>
+
+        <div class="about-img about-img-left">
+          <div class="about-frame"></div>
+        </div>
+
+        <svg class="about-stair-svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+          <polyline points="0,0 100,0 100,50 200,50 200,100 300,100 300,150 400,150 400,200 500,200 500,250 600,250 600,300 700,300 700,350 800,350" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" />
+        </svg>
+
+        <div class="about-img about-img-right">
+          <div class="about-frame"></div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ──────────────────────────────────────────────────── -->
+  <section id="contact" class="cta-section">
+    <div class="cta-inner">
+      <h2 class="cta-heading">
+        Let's Build<br />Your Empire
+      </h2>
+      <div class="cta-divider"></div>
+      <p class="cta-tagline">
+        One high-converting page, sequence, or campaign at a time.<br />
+        I take on a limited number of clients each month.
+      </p>
+      <a href="mailto:greenraven1000@gmail.com" class="btn-primary">Work With Me</a>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <p class="footer-text">© 2026 Green Raven. All rights reserved.</p>
+  </footer>
+
+<script>
+  const buttons = document.querySelectorAll('.toggle-btn');
+  const tabServices = document.getElementById('tab-services')!;
+  const tabSkills = document.getElementById('tab-skills')!;
+
+  function showTab(name: string) {
+    const show = name === 'services' ? tabServices : tabSkills;
+    const hide = name === 'services' ? tabSkills : tabServices;
+
+    const hideCards = hide.querySelectorAll<HTMLElement>('.service-card');
+    const showCards = show.querySelectorAll<HTMLElement>('.service-card');
+
+    hideCards.forEach(c => { c.style.opacity = '0'; c.style.transform = 'translateY(8px)'; });
+
+    setTimeout(() => {
+      hide.style.display = 'none';
+      show.style.display = '';
+      showCards.forEach(c => { c.style.opacity = '0'; c.style.transform = 'translateY(8px)'; });
+
+      requestAnimationFrame(() => {
+        showCards.forEach((c, i) => {
+          setTimeout(() => { c.style.opacity = '1'; c.style.transform = 'translateY(0)'; }, i * 50);
+        });
+      });
+    }, 250);
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('toggle-active'));
+      btn.classList.add('toggle-active');
+      showTab(btn.getAttribute('data-tab')!);
+    });
+  });
+
+  const starsContainer = document.getElementById('stars-container')!;
+
+  function spawnStar() {
+    const star = document.createElement('span');
+    star.classList.add('shooting-star');
+    star.style.top = '0%';
+    star.style.left = `${10 + Math.random() * 80}%`;
+    const dur = 1.5 + Math.random() * 0.5;
+    star.style.animationDuration = `${dur}s`;
+    starsContainer.appendChild(star);
+    star.addEventListener('animationend', () => star.remove());
+    setTimeout(spawnStar, 4000 + Math.random() * 4000);
+  }
+  setTimeout(spawnStar, 1000);
+  setTimeout(spawnStar, 3000);
+
+</script>
+
+</BaseLayout>
